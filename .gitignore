@@ -5,6 +5,7 @@
 *.so
 *.dylib
 
+.log
 # enviroment variables
 .env
 
@@ -16,3 +17,4 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+# 
