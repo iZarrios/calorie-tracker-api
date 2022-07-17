@@ -5,10 +5,11 @@
 *.so
 *.dylib
 
-.log
+*.log
 # enviroment variables
 .env
 
+tmp/
 # Test binary, built with `go test -c`
 *.test
 

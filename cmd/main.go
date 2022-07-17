@@ -1,8 +1,8 @@
 package main
 
 import (
-	"flag"
 	"net/http"
+	"os"
 
 	"github.com/gin-gonic/contrib/cors"
 	"github.com/gin-gonic/gin"
@@ -10,11 +10,13 @@ import (
 )
 
 func main() {
-	var PORT string
-	flag.StringVar(&PORT, "port", "8000", "post of which the server is going to serve on")
+	// Added it to the .env file instead
+	//	var PORT string
+	//	flag.StringVar(&PORT, "port", "8000", "post of which the server is going to serve on")
 
-	flag.Parse()
+	//	flag.Parse()
 
+	PORT := os.Getenv("PORT")
 	r := gin.New()
 	r.Use(gin.Logger())
 	r.Use(cors.Default())
